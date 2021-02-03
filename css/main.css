@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+
+
+:root {
+    --primary-color: #333;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section - Header */
+.showcase {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+    
+}
+
+.showcase.active {
+    right: 300px; /*Width of the Menu */
+}
+
+
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+   
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+}
+
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    mix-blend-mode: overlay;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.text h2 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+   
+    
+}
+
+.text h3 {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1em;
+    text-transform: uppercase; 
+    
+}
+
+.text p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px; 
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}   
+
+.text a:hover {
+    transform: scale(1) translateY(5px); 
+    background: #ffa6c1;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px); 
+    
+}
+
+
+/* Navbar - Section */
+
+.nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    
+}
+
+.nav__list {
+    
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+
+}
+
+
+.nav__link {
+    color: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
+.nav__link:hover {
+   border-bottom: 3px solid #111 ;
+  
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+    top: 70px;
+    z-index: 1000;
+   
+   
+
+}
+
+ 
+
+
+
+.nav-open .nav {
+    transform: translateX(0);
+   
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+    background: #111;
+    padding: 20px 20px;
+ 
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+    
+   
+
+}
+
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+   
+   
+}
+
+
+.nav-open .hamburger::after {
+    opacity: 0;
+    transform: rotate(90deg) translateX(50px);
+    
+   
+}
+
+
+.hamburger {
+    display: block;
+    position: relative;
+   
+   
+    
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+   
+    width: 2em;
+    height: 2px;
+    border-radius: 1em;
+    margin: 3px 0;
+    transition: transform 250ms ease-in-out;
+    background: #fff ;
+    
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+   
+
+}
+
+.hamburger::before {
+    top: 6px;
+    
+}
+
+.hamburger::after {
+    bottom: 6px;
+    
+}
+
+
+/* About - Section */
+.section-about img {
+    height: 350px;
+    width: 300px;
+    margin-top: 70px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4%;
+    
+}
+
+.img-second {
+    margin-top: 50px;
+    height: 500px;
+}
+
+.section-about h5 {
+    margin-top: 80px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.section-about h3 {
+    margin-top: 0%;
+    
+}
+
+
+/* Destinations - Section */
+
+.section-destinations {
+    margin-top: 80px;
+
+   
+   
+}
+
+.section-destinations h1 {
+    font-weight: bold;
+    
+}
+
+.section-destinations p {
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.section-destinations .card-title {
+    font-weight: 800;
+    margin: -10px;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    
+   
+}
+
+
+.section-destinations .price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+}
+
+.section-destinations .price {
+   font-size: 1.5rem;
+   background: transparent;
+   color: #fff;
+   box-shadow: none;
+   font-family: 'Dancing Script', cursive;
+   font-weight: bolder;
+   
+}
+
+
+/* Booking - Section */
+.section-booking {
+   
+    background: #111;
+    width: 100%;
+    height: 500px;
+    margin: 60px 0;
+    background: url('../img/pexels-pok-rie-1655166.jpg')  no-repeat ;
+   
+}
+
+
+
+.booking-info h4 {
+    margin-top: 120px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 3rem;
+    
+   
+    
+    
+}
+
+.booking-info p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    
+}
+
+
+
+.booking-info  a {
+    margin: 30px 0;
+    border-radius: 4%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 1em;
+    background: #fff;
+    padding: 7px 20px; 
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    
+}
+
+.booking-info a:hover {
+    background: #ffa6c1;
+  
+    
+}
+
+
+
+/* Video play*/
+
+.responsive-video {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    margin: 120px 120px;
+    outline: none !important;
+    border-radius: 2%;
+
+    opacity: 0.7;
+    
+    
+    
+}
+
+/* Blog Posts */
+
+.section-blog h3 {
+    font-weight: bold;
+}
+
+.section-blog p {
+  margin: 2rem;
+}
+
+.blog-card-image {
+    height: 350px;
+    width: 100%;
+}
+
+.card-content , .card-title {
+    outline: 0px solid transparent;
+    border-style: none;
+    border: none;
+}
+
+
+/* Footer - Section  */
+.page-footer {
+    background: #000000;
+    margin-top: 100px;
+    height: 350px;
+   /* border-bottom: 1px solid #fff; */
+   
+}
+
+.page-footer h4 {
+    font-family: 'Dancing Script', cursive;
+
+}
+
+.page-footer p {
+    font-family: 'Dancing Script', cursive;
+    
+    font-size: 1.5rem;
+}
+
+.blog-footer li{
+    margin: 1rem 0;
+}
+
+.page-footer .footer-links  {
+    margin-left: 100px;
+}
+
+.contact {
+    margin: 1.2rem 0;
+    line-height: 2rem;
+}
+
+
+.copyright-info {
+   margin-top: 30px ;
+  
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    /* Header - Section*/
+    .showcase, .showcase header {
+        padding: 40px;
+    }
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+    }
+
+    .nav-toggle {
+        top: 20px;
+        right: 10px;
+    }
+
+
+     /* About - Section*/
+    .about-me__body{
+        
+        text-align: center;
+     
+  
+    }
+
+    .section-about img{
+        width: 100%;
+        height: 10%;
+        margin: 80px 0;
+       
+    }
+    
+    /* Booking - Section*/
+    .section-booking {
+        width: 100%;
+        text-align: center;
+       
+        
+    }
+
+    
+    .video-wrapper {
+        align-self: center;
+        height: 450px;
+        width: 350px;
+        margin: -100px -120px;
+        
+    }
+    /* Blog - Section*/
+
+    .section-blog .card {
+        width: 350px;
+    }
+
+    .section-blog  .blog-card-image {
+        height: 350px;
+        width: 100%;
+       
+    }
+    
+
+/* Footer - Section  */
+.page-footer {
+    height: 100%;
+
+ }
+
+
+}
