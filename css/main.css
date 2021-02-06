@@ -550,22 +550,26 @@
         width: 100%;
         text-align: center;
        
-        
+    }
+
+    .section-booking h4 {
+        font-size: 30px;
+        text-align: center;
     }
 
     
-    .video-wrapper {
-        align-self: center;
+    .responsive-video {
+        
         height: 450px;
-        width: 290px;
+        width: 350px;
         opacity: 1;
-        margin: 20px 0;
+        margin: 40px 0;
         
     }
     /* Blog - Section*/
 
     .section-blog h3{
-        margin-top: 100px;
+        margin-top: 20px;
     }
 
     .section-blog .card {
