@@ -118,11 +118,6 @@
     transition: 0.2s;
 }   
 
-.text a:hover {
-    transform: scale(1) translateY(5px); 
-    background: #ffa6c1;
-}
-
 .social {
     position: absolute;
     bottom: 20px;
@@ -185,14 +180,33 @@
     font-size: 30px;
     text-transform: uppercase;
     text-decoration: none;
+    
+}
+
+/*Navbar Hover - Stroke Effect */
+.nav  ul li a {
+    position: relative;
+}
+
+.nav ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #111;
+  height: 2px;
+  transition: all .5s;
+}
+
+.nav ul li a:hover:after {
+    width: 100%;
 }
 
 
-
-.nav__link:hover {
-   border-bottom: 3px solid #111 ;
-  
-}
 
 .nav-toggle {
     padding: .5em;
@@ -207,8 +221,6 @@
    
 
 }
-
- 
 
 
 
@@ -399,29 +411,18 @@
 
 
 .booking-info  a {
-    margin: 30px 0;
-    border-radius: 4%;
-    width: 150px;
-    height: 50px;
-    text-align: center;
     font-size: 1em;
     background: #fff;
-    padding: 7px 20px; 
+    padding: 10px 30px; 
     text-decoration: none;
     color: #111;
+    margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: 0.2s;
     
     
 }
-
-.booking-info a:hover {
-    background: #ffa6c1;
-  
-    
-}
-
-
 
 /* Video play*/
 
@@ -432,7 +433,6 @@
     margin: 120px 120px;
     outline: none !important;
     border-radius: 2%;
-
     opacity: 0.7;
     
     
@@ -445,8 +445,10 @@
     font-weight: bold;
 }
 
-.section-blog p {
+.section-blog .blog-notes {
   margin: 2rem;
+  font-size: 20px;
+  text-align: center;
 }
 
 .blog-card-image {
@@ -555,8 +557,9 @@
     .video-wrapper {
         align-self: center;
         height: 450px;
-        width: 320px;
+        width: 290px;
         opacity: 1;
+        margin: 20px 0;
         
     }
     /* Blog - Section*/
@@ -567,11 +570,13 @@
 
     .section-blog .card {
         width: 320px;
+        margin: 10px 20px;
     }
 
     .section-blog  .blog-card-image {
         height: 320px;
-        width: 100%;
+       
+        
        
     }
     

@@ -15,6 +15,9 @@
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 
+  
+  <!-- Hover CSS-->
+  <link rel="stylesheet" href="css/hover.css">
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -22,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-  <!-- =======================================================
+  <!-- ====================================================================
         Theme Name: Caroline Travels
         Github: https://github.com/Web1017/Caroline-Travel-Web-Application
         Author: Javid Niftaliyev
@@ -34,6 +37,7 @@
         Oliver Sjöström from pexels, Abdel Rahman Abu Baker from pexels
         Video Source: Taryn Elliott from Pexels
         https://www.pexels.com/video/a-woman-walking-towards-a-recreational-vehicle-with-hot-air-balloon-festival-as-backdrop-3064220/
+        and https://www.pexels.com/video/6473516/
 
     ======================================================= -->
 
@@ -41,9 +45,6 @@
 </head>
 
 <body id="home" class="scrollspy">
-
-  <!-- Navbar Section -->
-
 
   <!-- Header Section -->
   <section class="showcase  ">
@@ -60,7 +61,7 @@
       <h3>and Discover New Places</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora itaque dolorem! Dicta totam
         dignissimos laboriosam, consequatur ad accusamus sed!</p>
-      <a href="#" class="">Explore</a>
+      <a href="#" class="hvr-sweep-to-right hvr-grow">Explore</a>
       
     </div>
     <ul class="social">
@@ -81,7 +82,9 @@
         <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
         <li class="nav__item"><a href="#destinations" class="nav__link">Destinations</a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        <li class="nav__item"><a href="#booking" class="nav__link">Booking</a></li>
+        <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
     </ul>
   </div>
 
@@ -131,9 +134,6 @@
              
             </div>
           
-           <!-- <div class="card-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, quo.
-            </div> -->
           </div>
         </div>
         <div class="col s12 m4">
@@ -143,9 +143,7 @@
               <span class="card-title">Indonesia</span>
               <p class="price"> $2000</a> 
             </div>
-            <!-- <div class="card-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, quo.
-            </div>-->
+          
           </div>
         </div>
         <div class="col s12 m4">
@@ -155,16 +153,14 @@
               <span class="card-title">Germany</span>
               <p class="price"> $1500</a> 
             </div>
-           <!--  <div class="card-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, quo.
-            </div>-->
+           
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
+ <!-- End of Top Destinations -->
  
  
   <!-- Section - Booking -->
@@ -174,28 +170,26 @@
         <div class="booking-info col l6 s12 m4">
           <h4>Book Now and Receive 20% Off on your First Purchase </h4>
           <p>View some of our Best Travel destinations and start your journey.</p>
-          <a class="waves-effect waves-light btn">button</a>
+          <a class="hvr-sweep-to-right ">button</a>
         </div>
 
         <div class="clip col l6 s12 m4">
           <div class="video-wrapper">
             <video class="responsive-video"  controls >
-              <source src="./Pexels Videos 1204911.mp4" type="video/mp4" style="pointer-events: none;">
+              <source src="./pexels-taryn-elliott-6473516.mp4" type="video/mp4" style="pointer-events: none;">
             </video>
-            
-       
-         <!--  <img src="img/pexels-yaroslav-shuraev-4183075.jpg" alt=""> -->
         </div>
       </div>
     </div>
   </section>
+  <!-- End of Section - Booking -->
 
-
+    <!-- Section - Blog -->
   <section id="blog"  class="section section-blog  scrollspy">
     <div class="container ">
       <div class="row">
         <h3 class="center"> Latest Blog Posts </h3>
-          <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic natus optio animi?</p>
+          <p class="blog-notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic natus optio animi?</p>
             <!-- Blog #1 --->
             <div class="col l3 s12">
           <div class="card ">
@@ -265,6 +259,8 @@
 
   </section>
 
+  <!--End of Section - Blog -->
+
   <!-- Section - Picture Gallery -->
 <!--  <section id="gallery" class="section section-gallery scrollspy">
     <div class="container">
@@ -292,7 +288,7 @@
  
 
   <!-- Section - Footer -->
-  <footer class="page-footer">
+  <footer id="contact" class="page-footer">
     <div class="container">
       <div class="row">
         <div class=" col l4 s12">
@@ -345,6 +341,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- End of Section - Footer -->
 
   <!--JavaScript for optimized loading-->
 
