@@ -542,7 +542,9 @@
        
     }
  /* Destinations - Section*/
-    
+ .section-destinations {
+     margin-top: 15px;
+ }
     
     
     /* Booking - Section*/
@@ -563,13 +565,13 @@
         height: 450px;
         width: 350px;
         opacity: 1;
-        margin: 40px 0;
+        margin: 50px 0;
         
     }
     /* Blog - Section*/
 
     .section-blog h3{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .section-blog .card {
