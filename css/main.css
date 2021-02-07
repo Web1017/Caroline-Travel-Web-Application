@@ -571,12 +571,12 @@
     /* Blog - Section*/
 
     .section-blog h3{
-        margin-top: 30px;
+        margin: 20px;
     }
 
     .section-blog .card {
         width: 320px;
-        margin: 10px 20px;
+      
     }
 
     .section-blog  .blog-card-image {
@@ -595,3 +595,65 @@
 
 
 }
+
+
+/* Ipad */
+  @media only screen and (min-device-height: 768px) and (max-device-width: 1024px)  {
+
+
+/* Destinations - Section*/
+    .section-destinations .card-title, .price {
+        font-size: 35px;
+    }
+
+/* Booking - Section*/
+.section-booking {
+    width: 100%;
+    text-align: center;
+   
+}
+
+.section-booking h4 {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.responsive-video {
+    
+    height: 450px;
+    width: 350px;
+    opacity: 1;
+    margin: 50px 0;
+    
+}
+
+     /* Blog - Section*/
+
+     .section-blog {
+         text-align: center;
+     }
+
+     .section-blog h3{
+        margin: 20px 0;
+       
+    }
+
+    .section-blog .card {
+       width: 380px;
+        display: inline-block;
+      
+    }
+
+    .section-blog  .blog-card-image {
+        height: 320px;
+        width: 100%;
+        
+       
+    }
+   
+/* Footer - Section  */
+.page-footer {
+    height: 100%;
+
+  }
