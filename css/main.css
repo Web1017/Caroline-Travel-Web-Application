@@ -482,12 +482,13 @@ p {
   }
   /* Blog - Section*/
 
-  .section-blog h3 {
-    margin: 20px;
+  .main-blog-title {
+    margin: 30px 0;
   }
 
   .section-blog .card {
     width: 320px;
+    height: 450px;
   }
 
   .section-blog .blog-card-image {
