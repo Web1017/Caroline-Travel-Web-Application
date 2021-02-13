@@ -1,195 +1,173 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap");
 
 :root {
-    --primary-color: #333;
+  --primary-color: #333;
 }
 
-
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Section - Header */
 .showcase {
-    position: relative;
-    right: 0;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #111;
-    color: #fff;
-    z-index: 2;
-    transition: 0.5s;
-    
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
 }
-
-.showcase.active {
-    right: 300px; /*Width of the Menu */
-}
-
-
 
 .showcase header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-   
-    font-family: 'Dancing Script', cursive;
-    cursor: pointer;
+  font-family: "Dancing Script", cursive;
+  cursor: pointer;
 }
 
-
 .showcase video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--primary-color);
-    mix-blend-mode: overlay;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  mix-blend-mode: overlay;
 }
 
 .text {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .text h2 {
-    font-size: 4em;
-    font-weight: 700;
-    line-height: 1em;
-   
-    
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
 }
 
 .text h3 {
-    font-size: 2.5em;
-    font-weight: 400;
-    line-height: 1em;
-    text-transform: uppercase; 
-    
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
 }
 
 .text p {
-    font-size: 1.1em;
-    margin: 20px 0;
-    font-weight: 400;
-    max-width: 700px;
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
 }
 
 .text a {
-    display: inline-block;
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 30px; 
-    text-decoration: none;
-    color: #111;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.2s;
-}   
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
 
-.text a:hover{
-    letter-spacing: 4px;
+.text a:hover {
+  letter-spacing: 4px;
 }
 
 .social {
-    position: absolute;
-    bottom: 20px;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social li {
-    list-style: none;
+  list-style: none;
 }
 
 .social li a {
-    display: inline-block;
-    filter: invert(1);
-    margin-right: 20px;
-    transform: scale(0.5);
-    transition: 0.5s;
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
 }
 
 .social li a:hover {
-    transform: scale(0.5) translateY(-15px); 
-    
+  transform: scale(0.5) translateY(-15px);
 }
-
 
 /* Navbar - Section */
 
 .nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-    
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .nav__list {
-    
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
-
 .nav__link {
-    color: inherit;
-    font-weight: 700;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    
+  color: inherit;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /*Navbar Hover - Stroke Effect */
-.nav  ul li a {
-    position: relative;
+.nav ul li a {
+  position: relative;
 }
 
 .nav ul li a:after {
@@ -199,254 +177,196 @@
   right: 0;
   margin: auto;
   width: 0%;
-  content: '.';
+  content: ".";
   color: transparent;
   background: #111;
   height: 2px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .nav ul li a:hover:after {
-    width: 100%;
+  width: 100%;
 }
-
-
 
 .nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 80px;
-    top: 70px;
-    z-index: 1000;
-   
-   
-
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  z-index: 1000;
 }
 
-
-
 .nav-open .nav {
-    transform: translateX(0);
-   
+  transform: translateX(0);
 }
 
 .nav-open .nav-toggle {
-    position: fixed;
-    background: #111;
-    padding: 20px 20px;
- 
+  position: fixed;
+  background: #111;
+  padding: 20px 20px;
 }
 
 .nav-open .hamburger {
-    transform: rotate(.625turn);
-    
-   
-
+  transform: rotate(0.625turn);
 }
-
 
 .nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-   
-   
+  transform: rotate(90deg) translateX(-6px);
 }
-
 
 .nav-open .hamburger::after {
-    opacity: 0;
-    transform: rotate(90deg) translateX(50px);
-    
-   
+  opacity: 0;
+  transform: rotate(90deg) translateX(50px);
 }
 
-
 .hamburger {
-    display: block;
-    position: relative;
-   
-   
-    
+  display: block;
+  position: relative;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-   
-    width: 2em;
-    height: 2px;
-    border-radius: 1em;
-    margin: 3px 0;
-    transition: transform 250ms ease-in-out;
-    background: #fff ;
-    
+  width: 2em;
+  height: 2px;
+  border-radius: 1em;
+  margin: 3px 0;
+  transition: transform 250ms ease-in-out;
+  background: #fff;
 }
-
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-   
-
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .hamburger::before {
-    top: 6px;
-    
+  top: 6px;
 }
 
 .hamburger::after {
-    bottom: 6px;
-    
+  bottom: 6px;
 }
-
 
 /* About - Section */
 .section-about img {
-    height: 350px;
-    width: 300px;
-    margin-top: 70px;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 4%;
-    
+  height: 350px;
+  width: 300px;
+  margin-top: 70px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4%;
 }
 
 .img-second {
-    margin-top: 50px;
-    height: 500px;
+  margin-top: 50px;
+  height: 500px;
 }
 
 .section-about h5 {
-    margin-top: 80px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-style: italic;
+  margin-top: 80px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
 }
 .section-about h3 {
-    margin-top: 0%;
-    
+  margin-top: 0%;
 }
-
 
 /* Destinations - Section */
 
 .section-destinations {
-    margin-top: 80px;
-
-   
-   
+  margin-top: 80px;
 }
 
 .section-destinations h2 {
-    font-weight: bold;
-    
+  font-weight: bold;
 }
 
 .section-destinations p {
-    font-size: 20px;
-    margin-bottom: 70px;
+  font-size: 20px;
+  margin-bottom: 70px;
 }
 
 .section-destinations .card-title {
-    font-weight: 800;
-    margin: -10px;
-    font-size: 2rem;
-    font-family: 'Dancing Script', cursive;
-    
-   
-}
-
-
-.section-destinations .price {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100%;
+  font-weight: 800;
+  margin: -10px;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
 }
 
 .section-destinations .price {
-   font-size: 1.5rem;
-   background: transparent;
-   color: #fff;
-   box-shadow: none;
-   font-family: 'Dancing Script', cursive;
-   font-weight: bolder;
-   
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
 }
 
+.section-destinations .price {
+  font-size: 1.5rem;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+}
 
 /* Booking - Section */
 .section-booking {
-   
-    background: #111;
-    width: 100%;
-    height: 500px;
-    margin: 60px 0;
-    background: url('../img/pexels-pok-rie-1655166.jpg')  no-repeat ;
-   
+  background: #111;
+  width: 100%;
+  height: 500px;
+  margin: 60px 0;
+  background: url("../img/pexels-pok-rie-1655166.jpg") no-repeat;
 }
 
-
-
 .booking-info h4 {
-    margin-top: 120px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 3rem;
-    
-   
-    
-    
+  margin-top: 120px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .booking-info p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 1rem 0;
-    
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
 }
 
-
-
-.booking-info  a {
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 30px; 
-    text-decoration: none;
-    color: #111;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.2s;
-    
-    
+.booking-info a {
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
 }
 
 /* Video play*/
 
 .responsive-video {
-    position: relative;
-    height: 350px;
-    width: 500px;
-    margin: 120px 120px;
-    outline: none !important;
-    border-radius: 2%;
-    opacity: 0.7;
-    
-    
-    
+  position: relative;
+  height: 350px;
+  width: 500px;
+  margin: 120px 120px;
+  outline: none !important;
+  border-radius: 2%;
+  opacity: 0.7;
 }
 
 /* Blog Posts */
 
 .section-blog h3 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .section-blog .blog-notes {
@@ -455,211 +375,179 @@
   text-align: center;
 }
 
-.blog-card-image {
-    height: 350px;
-    width: 100%;
+.section-blog .card {
+  height: 550px;
+  width: 100%;
 }
 
-.card-content , .card-title {
-    outline: 0px solid transparent;
-    border-style: none;
-    border: none;
+.card-content,
+.card-title {
+  outline: 0px solid transparent;
+  border-style: none;
+  border: none;
 }
-
+.card-reveal .card-title,
+p {
+  margin: 40px 0;
+}
 
 /* Footer - Section  */
 .page-footer {
-    background: #000000;
-    margin-top: 100px;
-    height: 350px;
-   /* border-bottom: 1px solid #fff; */
-   
+  background: #111;
+  margin-top: 100px;
+  height: 350px;
 }
 
 .page-footer h4 {
-    font-family: 'Dancing Script', cursive;
-
+  font-family: "Dancing Script", cursive;
 }
 
 .page-footer p {
-    font-family: 'Dancing Script', cursive;
-    
-    font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+
+  font-size: 1.5rem;
 }
 
-.blog-footer li{
-    margin: 1rem 0;
+.blog-footer li {
+  margin: 1rem 0;
 }
 
-.page-footer .footer-links  {
-    margin-left: 100px;
+.page-footer .footer-links {
+  margin-left: 100px;
 }
 
 .contact {
-    margin: 1.2rem 0;
-    line-height: 2rem;
+  margin: 1.2rem 0;
+  line-height: 2rem;
 }
-
 
 .copyright-info {
-   margin-top: 30px ;
-  
+  margin-top: 30px;
 }
 
-
-
-
-
-
+.page-footer .footer-copyright {
+  background: #111;
+}
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-    /* Header - Section*/
-    .showcase, .showcase header {
-        padding: 40px;
-    }
-    .text h2 {
-        font-size: 3em;
-    }
+  /* Header - Section*/
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
 
-    .text h3 {
-        font-size: 2em;
-    }
+  .text h3 {
+    font-size: 2em;
+  }
 
-    .nav-toggle {
-        top: 20px;
-        right: 10px;
-    }
+  .nav-toggle {
+    top: 20px;
+    right: 10px;
+  }
 
+  /* About - Section*/
+  .about-me__body {
+    text-align: center;
+  }
 
-     /* About - Section*/
-    .about-me__body{
-        
-        text-align: center;
-     
-  
-    }
+  .section-about img {
+    width: 100%;
+    height: 10%;
+    margin: 80px 0px;
+  }
+  /* Destinations - Section*/
+  .section-destinations {
+    margin-top: 15px;
+  }
 
-    .section-about img{
-        width: 100%;
-        height: 10%;
-        margin: 80px 0px;
-       
-    }
- /* Destinations - Section*/
- .section-destinations {
-     margin-top: 15px;
- }
-    
-    
-    /* Booking - Section*/
-    .section-booking {
-        width: 100%;
-        text-align: center;
-       
-    }
-
-    .section-booking h4 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    
-    .responsive-video {
-        
-        height: 450px;
-        width: 350px;
-        opacity: 1;
-        margin: 50px 0;
-        
-    }
-    /* Blog - Section*/
-
-    .section-blog h3{
-        margin: 20px;
-    }
-
-    .section-blog .card {
-        width: 320px;
-      
-    }
-
-    .section-blog  .blog-card-image {
-        height: 320px;
-       
-        
-       
-    }
-    
-
-/* Footer - Section  */
-.page-footer {
-    height: 100%;
-
- }
-
-
-}
-
-
-/* Ipad */
-  @media only screen and (min-device-height: 768px) and (max-device-width: 1024px)  {
-
-
-/* Destinations - Section*/
-    .section-destinations .card-title, .price {
-        font-size: 35px;
-    }
-
-/* Booking - Section*/
-.section-booking {
+  /* Booking - Section*/
+  .section-booking {
     width: 100%;
     text-align: center;
-   
-}
+  }
 
-.section-booking h4 {
+  .section-booking h4 {
     font-size: 30px;
     text-align: center;
-}
+  }
 
-
-.responsive-video {
-    
+  .responsive-video {
     height: 450px;
     width: 350px;
     opacity: 1;
     margin: 50px 0;
-    
-}
+  }
+  /* Blog - Section*/
 
-     /* Blog - Section*/
-
-     .section-blog {
-         text-align: center;
-     }
-
-     .section-blog h3{
-        margin: 20px 0;
-       
-    }
-
-    .section-blog .card {
-       width: 380px;
-        display: inline-block;
-      
-    }
-
-    .section-blog  .blog-card-image {
-        height: 320px;
-        width: 100%;
-        
-       
-    }
-   
-/* Footer - Section  */
-.page-footer {
-    height: 100%;
-
+  .section-blog h3 {
+    margin: 20px;
   }
 
+  .section-blog .card {
+    width: 320px;
+  }
+
+  .section-blog .blog-card-image {
+    height: 320px;
+  }
+
+  /* Footer - Section  */
+  .page-footer {
+    height: 100%;
+  }
+}
+
+/* Ipad Support*/
+@media only screen and (min-device-height: 768px) and (max-device-width: 1024px) {
+  /* Destinations - Section*/
+  .section-destinations .card-title,
+  .price {
+    font-size: 35px;
+  }
+
+  /* Booking - Section*/
+  .section-booking {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-booking h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .responsive-video {
+    height: 450px;
+    width: 350px;
+    opacity: 1;
+    margin: 50px 0;
+  }
+
+  /* Blog - Section*/
+
+  .section-blog {
+    text-align: center;
+  }
+
+  .section-blog h3 {
+    margin: 20px 0;
+  }
+
+  .section-blog .card {
+    width: 380px;
+    display: inline-block;
+  }
+
+  .section-blog .blog-card-image {
+    height: 320px;
+    width: 100%;
+  }
+
+  /* Footer - Section  */
+  .page-footer {
+    height: 100%;
+  }
 }
